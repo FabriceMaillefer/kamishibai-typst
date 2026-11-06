@@ -4,7 +4,14 @@ Génère des planches A3 (42 × 29,7 cm) à partir d'images, imprimées sur 2 pa
 
 ## Prérequis
 
-- [Typst](https://typst.app) (testé avec 0.15) : `pacman -S typst` (Arch), ou binaire depuis [github.com/typst/typst/releases](https://github.com/typst/typst/releases)
+- [Typst](https://typst.app) (testé avec 0.15)
+  - Windows : `winget install --id Typst.Typst`
+  - Arch : `pacman -S typst`
+  - Autres : binaire depuis [github.com/typst/typst/releases](https://github.com/typst/typst/releases)
+- [Python 3](https://www.python.org/downloads/), sans module supplémentaire
+  - Windows : `winget install Python.Python.3.13`
+
+Après une installation sous Windows, fermer et rouvrir le terminal pour que les commandes soient reconnues.
 
 ## Specs
 
@@ -17,8 +24,11 @@ Génère des planches A3 (42 × 29,7 cm) à partir d'images, imprimées sur 2 pa
 ## Usage
 
 1. Placer les images dans `Images/`
-2. Régénérer la liste : `./update-images.sh`
-3. Compiler : `typst compile kamishibai.typ kamishibai.pdf`
-4. Imprimer en **taille réelle (100 %)**, jamais "ajuster à la page"
-5. Découper la bande le long du pointillé sur le bord intérieur de chaque page
-6. Recoller les deux pages bord à bord (aligner les pointillés en haut/bas) pour reformer l'A3
+2. Générer le PDF, ce qui met aussi à jour la liste des images :
+   - Windows : double-cliquer sur `generer-pdf.bat`, ou lancer `py build.py`
+   - Linux/macOS : `./build.py`
+3. Imprimer `kamishibai.pdf` en **taille réelle (100 %)**, jamais "ajuster à la page"
+4. Découper la bande le long du pointillé sur le bord intérieur de chaque page
+5. Recoller les deux pages bord à bord (aligner les pointillés en haut/bas) pour reformer l'A3
+
+Sous Windows, fermer le PDF dans Acrobat avant de relancer la génération : Acrobat verrouille le fichier qu'il affiche.

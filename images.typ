@@ -1,4 +1,4 @@
-// Généré automatiquement par update-images.sh — ne pas éditer à la main.
+// Généré automatiquement par build.py — ne pas éditer à la main.
 #let images = (
   (path: "Images/1.jpg", label: "1"),
   (path: "Images/2.jpg", label: "2"),

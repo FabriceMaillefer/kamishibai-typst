@@ -13,10 +13,10 @@
 //
 // Utilisation :
 //   1. Placer les images dans le dossier Images/
-//   2. Lancer ./update-images.sh pour régénérer images.typ
-//   3. Compiler : typst compile kamishibai.typ kamishibai.pdf
-//   4. Imprimer en taille réelle (100 %, sans "ajuster à la page")
-//   5. Découper la bande le long du repère pointillé sur le bord intérieur
+//   2. Lancer build.py (ou generer-pdf.bat sous Windows) pour régénérer
+//      images.typ et compiler kamishibai.pdf
+//   3. Imprimer en taille réelle (100 %, sans "ajuster à la page")
+//   4. Découper la bande le long du repère pointillé sur le bord intérieur
 //      de chaque page, puis recoller les deux pages bord à bord en alignant
 //      les traits pointillés (haut et bas de la page) pour reformer l'A3.
 
